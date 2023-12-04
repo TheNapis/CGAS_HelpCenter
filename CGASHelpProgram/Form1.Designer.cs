@@ -30,17 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Time_label = new System.Windows.Forms.Label();
             this.Date_label = new System.Windows.Forms.Label();
+            this.Time_label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.homeMenu1 = new CGASHelpProgram.Home.HomeMenu();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(163)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Date_label);
             this.panel1.Controls.Add(this.Time_label);
             this.panel1.Controls.Add(this.label1);
@@ -50,34 +53,9 @@
             this.panel1.Size = new System.Drawing.Size(734, 63);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Image = global::CGASHelpProgram.Properties.Resources.logo_CGAS__2_;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 63);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CGAS Centre d\'aide";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Time_label
-            // 
-            this.Time_label.AutoSize = true;
-            this.Time_label.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Time_label.ForeColor = System.Drawing.Color.White;
-            this.Time_label.Location = new System.Drawing.Point(651, 9);
-            this.Time_label.Name = "Time_label";
-            this.Time_label.Size = new System.Drawing.Size(50, 22);
-            this.Time_label.TabIndex = 14;
-            this.Time_label.Text = "Time";
-            this.Time_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Date_label
             // 
+            this.Date_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Date_label.AutoSize = true;
             this.Date_label.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date_label.ForeColor = System.Drawing.Color.White;
@@ -88,17 +66,54 @@
             this.Date_label.Text = "Date";
             this.Date_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // Time_label
+            // 
+            this.Time_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Time_label.AutoSize = true;
+            this.Time_label.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Time_label.ForeColor = System.Drawing.Color.White;
+            this.Time_label.Location = new System.Drawing.Point(629, 9);
+            this.Time_label.Name = "Time_label";
+            this.Time_label.Size = new System.Drawing.Size(50, 22);
+            this.Time_label.TabIndex = 14;
+            this.Time_label.Text = "Time";
+            this.Time_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(65, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 63);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CGAS Centre d\'aide";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // homeMenu1
             // 
             this.homeMenu1.BackColor = System.Drawing.Color.Transparent;
-            this.homeMenu1.Location = new System.Drawing.Point(0, 66);
+            this.homeMenu1.Location = new System.Drawing.Point(0, 60);
+            this.homeMenu1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.homeMenu1.Name = "homeMenu1";
-            this.homeMenu1.Size = new System.Drawing.Size(734, 385);
+            this.homeMenu1.Size = new System.Drawing.Size(734, 384);
             this.homeMenu1.TabIndex = 1;
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::CGASHelpProgram.Properties.Resources.logo_CGAS__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -113,6 +128,7 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,6 +141,7 @@
         private System.Windows.Forms.Label Date_label;
         private System.Windows.Forms.Label Time_label;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

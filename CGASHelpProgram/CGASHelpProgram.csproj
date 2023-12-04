@@ -74,6 +74,12 @@
     <Compile Include="Home\HomeMenu.Designer.cs">
       <DependentUpon>HomeMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PowerOptions\PowerOptionMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PowerOptions\PowerOptionMenu.Designer.cs">
+      <DependentUpon>PowerOptionMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\HomeMenu.resx">
       <DependentUpon>HomeMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PowerOptions\PowerOptionMenu.resx">
+      <DependentUpon>PowerOptionMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
