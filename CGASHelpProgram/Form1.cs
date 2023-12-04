@@ -15,6 +15,18 @@ namespace CGASHelpProgram
         public Form1()
         {
             InitializeComponent();
+            timer1.Start();
+
+
+
+
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+
+        {
+            Time_label.Text = DateTime.Now.ToString("HH:mm:ss");
+            Date_label.Text = DateTime.Now.ToShortDateString();
+
         }
     }
 }
