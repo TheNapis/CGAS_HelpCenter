@@ -123,7 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CGAS.ico" />
-    <None Include="Resources\wrench-solid.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
