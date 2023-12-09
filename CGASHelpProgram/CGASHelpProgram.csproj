@@ -80,6 +80,12 @@
     <Compile Include="PowerOptions\PowerOptionMenu.Designer.cs">
       <DependentUpon>PowerOptionMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Problem\Software\SoftwareMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Problem\Software\SoftwareMenu.Designer.cs">
+      <DependentUpon>SoftwareMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PowerOptions\PowerOptionMenu.resx">
       <DependentUpon>PowerOptionMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Problem\Software\SoftwareMenu.resx">
+      <DependentUpon>SoftwareMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +142,10 @@
   <ItemGroup>
     <Content Include="CGAS.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Problem\Hardware\" />
+    <Folder Include="Problem\Other\" />
+    <Folder Include="Problem\System\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

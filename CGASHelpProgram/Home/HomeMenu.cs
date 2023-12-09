@@ -16,6 +16,7 @@ namespace CGASHelpProgram.Home
         {
             InitializeComponent();
             powerOptionMenu1.Visible = false;
+            softwareMenu1.Visible = false;
         }
 
         
@@ -35,7 +36,8 @@ namespace CGASHelpProgram.Home
 
         private void CGASDocs_Button_Click(object sender, EventArgs e)
         {
-            
+            // La documentation n'a pas encore été crée
+            MessageBox.Show("La documentation n'est accesible.");
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -47,11 +49,23 @@ namespace CGASHelpProgram.Home
             label1.Visible = true;
             CGASDocs_Button.Visible = true;
             PowerOptions_Button.Visible = true;
-            powerOptionMenu1.Hide();
             powerOptionMenu1.Visible = false;
+            softwareMenu1.Visible = false;
+
 
         } // Cache le menu d'alimentation et affiche les éléments du menu principal 
 
+        private void ProbSoftware_Button_Click(object sender, EventArgs e)
+        {
+            ProbHardware_Button.Visible = false;
+            ProbOther_Button.Visible = false;
+            ProbSoftware_Button.Visible = false;
+            ProbSystem_Button.Visible = false;
+            label1.Visible = false;
+            CGASDocs_Button.Visible = false;
+            PowerOptions_Button.Visible = false;
+            softwareMenu1.Visible = true;
+        }
     }
 
         

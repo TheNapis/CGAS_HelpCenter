@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.HomeButton = new FontAwesome.Sharp.IconButton();
             this.PowerOptions_Button = new FontAwesome.Sharp.IconButton();
             this.CGASDocs_Button = new FontAwesome.Sharp.IconButton();
             this.ProbOther_Button = new FontAwesome.Sharp.IconButton();
@@ -36,7 +37,7 @@
             this.ProbSoftware_Button = new FontAwesome.Sharp.IconButton();
             this.ProbHardware_Button = new FontAwesome.Sharp.IconButton();
             this.powerOptionMenu1 = new CGASHelpProgram.PowerOptions.PowerOptionMenu();
-            this.HomeButton = new FontAwesome.Sharp.IconButton();
+            this.softwareMenu1 = new CGASHelpProgram.Problem.Software.SoftwareMenu();
             this.SuspendLayout();
             // 
             // label1
@@ -44,11 +45,28 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 13);
+            this.label1.Location = new System.Drawing.Point(20, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 35);
+            this.label1.Size = new System.Drawing.Size(368, 45);
             this.label1.TabIndex = 13;
             this.label1.Text = "J\'ai un problème sur :";
+            // 
+            // HomeButton
+            // 
+            this.HomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(163)))));
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
+            this.HomeButton.IconColor = System.Drawing.Color.White;
+            this.HomeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.HomeButton.Location = new System.Drawing.Point(899, 0);
+            this.HomeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(80, 74);
+            this.HomeButton.TabIndex = 17;
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // PowerOptions_Button
             // 
@@ -60,9 +78,10 @@
             this.PowerOptions_Button.IconChar = FontAwesome.Sharp.IconChar.Gear;
             this.PowerOptions_Button.IconColor = System.Drawing.Color.Black;
             this.PowerOptions_Button.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.PowerOptions_Button.Location = new System.Drawing.Point(573, 83);
+            this.PowerOptions_Button.Location = new System.Drawing.Point(764, 102);
+            this.PowerOptions_Button.Margin = new System.Windows.Forms.Padding(4);
             this.PowerOptions_Button.Name = "PowerOptions_Button";
-            this.PowerOptions_Button.Size = new System.Drawing.Size(158, 201);
+            this.PowerOptions_Button.Size = new System.Drawing.Size(211, 247);
             this.PowerOptions_Button.TabIndex = 15;
             this.PowerOptions_Button.Text = "Options d\'alimentation";
             this.PowerOptions_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -80,9 +99,10 @@
             this.CGASDocs_Button.IconChar = FontAwesome.Sharp.IconChar.FileText;
             this.CGASDocs_Button.IconColor = System.Drawing.Color.Black;
             this.CGASDocs_Button.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CGASDocs_Button.Location = new System.Drawing.Point(400, 83);
+            this.CGASDocs_Button.Location = new System.Drawing.Point(533, 102);
+            this.CGASDocs_Button.Margin = new System.Windows.Forms.Padding(4);
             this.CGASDocs_Button.Name = "CGASDocs_Button";
-            this.CGASDocs_Button.Size = new System.Drawing.Size(167, 201);
+            this.CGASDocs_Button.Size = new System.Drawing.Size(223, 247);
             this.CGASDocs_Button.TabIndex = 14;
             this.CGASDocs_Button.Text = "Documentation\r\nC.G.A.S.\r\n";
             this.CGASDocs_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -100,9 +120,10 @@
             this.ProbOther_Button.IconChar = FontAwesome.Sharp.IconChar.Question;
             this.ProbOther_Button.IconColor = System.Drawing.Color.Black;
             this.ProbOther_Button.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ProbOther_Button.Location = new System.Drawing.Point(170, 188);
+            this.ProbOther_Button.Location = new System.Drawing.Point(227, 231);
+            this.ProbOther_Button.Margin = new System.Windows.Forms.Padding(4);
             this.ProbOther_Button.Name = "ProbOther_Button";
-            this.ProbOther_Button.Size = new System.Drawing.Size(136, 96);
+            this.ProbOther_Button.Size = new System.Drawing.Size(181, 118);
             this.ProbOther_Button.TabIndex = 12;
             this.ProbOther_Button.Text = "Autre";
             this.ProbOther_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -119,9 +140,10 @@
             this.ProbSystem_Button.IconChar = FontAwesome.Sharp.IconChar.Windows;
             this.ProbSystem_Button.IconColor = System.Drawing.Color.Black;
             this.ProbSystem_Button.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ProbSystem_Button.Location = new System.Drawing.Point(20, 188);
+            this.ProbSystem_Button.Location = new System.Drawing.Point(27, 231);
+            this.ProbSystem_Button.Margin = new System.Windows.Forms.Padding(4);
             this.ProbSystem_Button.Name = "ProbSystem_Button";
-            this.ProbSystem_Button.Size = new System.Drawing.Size(136, 96);
+            this.ProbSystem_Button.Size = new System.Drawing.Size(181, 118);
             this.ProbSystem_Button.TabIndex = 11;
             this.ProbSystem_Button.Text = "Système";
             this.ProbSystem_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -138,14 +160,16 @@
             this.ProbSoftware_Button.IconChar = FontAwesome.Sharp.IconChar.LaptopMedical;
             this.ProbSoftware_Button.IconColor = System.Drawing.Color.Black;
             this.ProbSoftware_Button.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ProbSoftware_Button.Location = new System.Drawing.Point(170, 83);
+            this.ProbSoftware_Button.Location = new System.Drawing.Point(227, 102);
+            this.ProbSoftware_Button.Margin = new System.Windows.Forms.Padding(4);
             this.ProbSoftware_Button.Name = "ProbSoftware_Button";
-            this.ProbSoftware_Button.Size = new System.Drawing.Size(136, 96);
+            this.ProbSoftware_Button.Size = new System.Drawing.Size(181, 118);
             this.ProbSoftware_Button.TabIndex = 10;
             this.ProbSoftware_Button.Text = "Logiciel";
             this.ProbSoftware_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ProbSoftware_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ProbSoftware_Button.UseVisualStyleBackColor = false;
+            this.ProbSoftware_Button.Click += new System.EventHandler(this.ProbSoftware_Button_Click);
             // 
             // ProbHardware_Button
             // 
@@ -157,9 +181,10 @@
             this.ProbHardware_Button.IconChar = FontAwesome.Sharp.IconChar.Wrench;
             this.ProbHardware_Button.IconColor = System.Drawing.Color.Black;
             this.ProbHardware_Button.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ProbHardware_Button.Location = new System.Drawing.Point(20, 83);
+            this.ProbHardware_Button.Location = new System.Drawing.Point(27, 102);
+            this.ProbHardware_Button.Margin = new System.Windows.Forms.Padding(4);
             this.ProbHardware_Button.Name = "ProbHardware_Button";
-            this.ProbHardware_Button.Size = new System.Drawing.Size(136, 96);
+            this.ProbHardware_Button.Size = new System.Drawing.Size(181, 118);
             this.ProbHardware_Button.TabIndex = 9;
             this.ProbHardware_Button.Text = "Matériel";
             this.ProbHardware_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -169,31 +194,25 @@
             // powerOptionMenu1
             // 
             this.powerOptionMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(117)))), ((int)(((byte)(216)))));
+            this.powerOptionMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.powerOptionMenu1.Location = new System.Drawing.Point(0, 0);
-            this.powerOptionMenu1.Margin = new System.Windows.Forms.Padding(4);
+            this.powerOptionMenu1.Margin = new System.Windows.Forms.Padding(5);
             this.powerOptionMenu1.Name = "powerOptionMenu1";
-            this.powerOptionMenu1.Size = new System.Drawing.Size(734, 387);
+            this.powerOptionMenu1.Size = new System.Drawing.Size(979, 476);
             this.powerOptionMenu1.TabIndex = 16;
             this.powerOptionMenu1.Visible = false;
             // 
-            // HomeButton
+            // softwareMenu1
             // 
-            this.HomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(163)))));
-            this.HomeButton.FlatAppearance.BorderSize = 0;
-            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
-            this.HomeButton.IconColor = System.Drawing.Color.White;
-            this.HomeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.HomeButton.Location = new System.Drawing.Point(674, 0);
-            this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(60, 60);
-            this.HomeButton.TabIndex = 17;
-            this.HomeButton.UseVisualStyleBackColor = false;
-            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            this.softwareMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(117)))), ((int)(((byte)(216)))));
+            this.softwareMenu1.Location = new System.Drawing.Point(0, 0);
+            this.softwareMenu1.Name = "softwareMenu1";
+            this.softwareMenu1.Size = new System.Drawing.Size(979, 476);
+            this.softwareMenu1.TabIndex = 18;
             // 
             // HomeMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(117)))), ((int)(((byte)(216)))));
             this.Controls.Add(this.HomeButton);
@@ -205,8 +224,10 @@
             this.Controls.Add(this.ProbSoftware_Button);
             this.Controls.Add(this.ProbHardware_Button);
             this.Controls.Add(this.powerOptionMenu1);
+            this.Controls.Add(this.softwareMenu1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomeMenu";
-            this.Size = new System.Drawing.Size(734, 387);
+            this.Size = new System.Drawing.Size(979, 476);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +243,6 @@
         private FontAwesome.Sharp.IconButton PowerOptions_Button;
         private PowerOptions.PowerOptionMenu powerOptionMenu1;
         private FontAwesome.Sharp.IconButton HomeButton;
+        private Problem.Software.SoftwareMenu softwareMenu1;
     }
 }
