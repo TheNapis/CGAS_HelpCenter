@@ -81,15 +81,15 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(65, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 63);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CGAS Centre d\'aide";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Date_label.AutoSize = true;
+            this.Date_label.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_label.ForeColor = System.Drawing.Color.White;
+            this.Date_label.Location = new System.Drawing.Point(629, 31);
+            this.Date_label.Name = "Date_label";
+            this.Date_label.Size = new System.Drawing.Size(46, 21);
+            this.Date_label.TabIndex = 15;
+            this.Date_label.Text = "Date";
+            this.Date_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // homeMenu1
             // 
