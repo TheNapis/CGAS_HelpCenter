@@ -24,5 +24,9 @@ namespace CGASHelpProgram
             Date_label.Text = DateTime.Now.ToShortDateString();
 
         }
+        public void test()
+        {
+            Close();
+        } 
     }
 }

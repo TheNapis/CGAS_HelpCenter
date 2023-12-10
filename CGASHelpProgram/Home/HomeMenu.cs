@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CGASHelpProgram.Problem.Software;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace CGASHelpProgram.Home
             InitializeComponent();
             powerOptionMenu1.Visible = false;
             softwareMenu1.Visible = false;
+            
         }
 
         
@@ -57,14 +59,10 @@ namespace CGASHelpProgram.Home
 
         private void ProbSoftware_Button_Click(object sender, EventArgs e)
         {
-            ProbHardware_Button.Visible = false;
-            ProbOther_Button.Visible = false;
-            ProbSoftware_Button.Visible = false;
-            ProbSystem_Button.Visible = false;
-            label1.Visible = false;
-            CGASDocs_Button.Visible = false;
-            PowerOptions_Button.Visible = false;
-            softwareMenu1.Visible = true;
+            Software page = new Software();
+            page.ShowDialog();
+            
+            
         }
     }
 

@@ -1,16 +1,16 @@
-﻿namespace CGASHelpProgram
+﻿namespace CGASHelpProgram.Problem.Software
 {
-    partial class Form1
+    partial class Software
     {
         /// <summary>
-        /// Variable nécessaire au concepteur.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Nettoyage des ressources utilisées.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,23 +20,23 @@
             base.Dispose(disposing);
         }
 
-        #region Code généré par le Concepteur Windows Form
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-        /// le contenu de cette méthode avec l'éditeur de code.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Date_label = new System.Windows.Forms.Label();
             this.Time_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.homeMenu1 = new CGASHelpProgram.Home.HomeMenu();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.softwareMenu1 = new CGASHelpProgram.Problem.Software.SoftwareMenu();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(734, 47);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // Title
             // 
@@ -62,21 +62,10 @@
             this.Title.ForeColor = System.Drawing.Color.White;
             this.Title.Location = new System.Drawing.Point(149, 0);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(179, 47);
+            this.Title.Size = new System.Drawing.Size(399, 47);
             this.Title.TabIndex = 18;
-            this.Title.Text = "Centre d\'aide";
+            this.Title.Text = "Centre d\'aide - Problème Logiciel";
             this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::CGASHelpProgram.Properties.Resources.logo_CGAS_3;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // Date_label
             // 
@@ -111,31 +100,45 @@
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 17;
             // 
-            // homeMenu1
-            // 
-            this.homeMenu1.BackColor = System.Drawing.Color.Transparent;
-            this.homeMenu1.Location = new System.Drawing.Point(0, 48);
-            this.homeMenu1.Margin = new System.Windows.Forms.Padding(4);
-            this.homeMenu1.Name = "homeMenu1";
-            this.homeMenu1.Size = new System.Drawing.Size(734, 394);
-            this.homeMenu1.TabIndex = 1;
-            // 
             // timer1
             // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form1
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::CGASHelpProgram.Properties.Resources.logo_CGAS_3;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // softwareMenu1
+            // 
+            this.softwareMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(117)))), ((int)(((byte)(216)))));
+            this.softwareMenu1.Location = new System.Drawing.Point(3, 52);
+            this.softwareMenu1.Margin = new System.Windows.Forms.Padding(2);
+            this.softwareMenu1.Name = "softwareMenu1";
+            this.softwareMenu1.Size = new System.Drawing.Size(731, 344);
+            this.softwareMenu1.TabIndex = 2;
+            // 
+            // Software
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(117)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(734, 401);
-            this.Controls.Add(this.homeMenu1);
+            this.Controls.Add(this.softwareMenu1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
+            this.Name = "Software";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "CGAS Centre d\'aide - Problème Logiciel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Software_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -146,13 +149,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private Home.HomeMenu homeMenu1;
+        private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Date_label;
         private System.Windows.Forms.Label Time_label;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label Title;
+        private SoftwareMenu softwareMenu1;
     }
 }
-
